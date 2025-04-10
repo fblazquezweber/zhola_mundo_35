@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+
+annotate view ZCDS_DD_ZCONCE_35 with
+{
+  @UI.facet: [
+  {
+  id: 'infoGeneral',
+  purpose:#STANDARD,
+  type:#IDENTIFICATION_REFERENCE,
+  label:'Informacion general',
+  position:10
+  },
+  {
+  id: 'Provincia',
+  purpose:#STANDARD,
+  type:#FIELDGROUP_REFERENCE,
+  targetElement:'Provincia',
+  label:'Provincia',
+  position: 20
+  }
+  ]
+
+  @UI.selectionField: [{ position: 10 }] //Posicion filtro de busqueda
+  @UI.lineItem:       [{ position: 10, label: 'ID Concesionario' }]//Indicamos posicion
+  @UI.identification: [{ position: 10 }]
+  @UI.hidden: true //Ocultar el campo
+  IdConce;
+
+  @UI.selectionField: [{ position: 120 }]
+  @UI.lineItem:       [{ position: 20, label: 'Nombre Concesionario' }]//Indicamos posicion
+  @UI.identification: [{ position: 20 }]
+  Nombre;
+
+  @UI.lineItem:       [{ position: 30, label: 'Localidad' }]//Indicamos posicion
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  Localidad;
+
+  @UI.lineItem:       [{ position: 40, label: 'Provincia' }]//Indicamos posicion
+  @UI.selectionField: [{ position: 30 }]
+  Provincia;
+
+  @UI.lineItem:       [{ position: 50, label: 'Codigo Postal' }] //Indicamos posicion
+  CodPostal;
+
+  @UI.lineItem:       [{ position: 60, label: 'Telefono' }] //Indicamos posicion
+  Telefono;
+
+  @UI.lineItem:       [{ position:70, label: 'Email' }]
+  Email;
+}

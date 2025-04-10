@@ -1,0 +1,54 @@
+managed implementation in class ZBP_R_COCHE_35 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_COCHE_35 alias ZrCoche35
+persistent table ZCOCHE_35
+draft table ZCOCHE_35_D
+etag master AbpLocinstLastchangeUtcl
+lock master total etag AbpLastchangeUtcl
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   IdCoche,
+   IdClienteCoch;
+
+  field ( readonly )
+   UserCreate,
+   AbpLocinstLastchangeTstmp,
+   AbpLocinstLastchangeUtcl,
+   UserLastChange,
+   AbpLastchangeTstmpl,
+   AbpLastchangeUtcl;
+
+  field ( readonly : update )
+   IdCoche,
+   IdClienteCoch;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZCOCHE_35
+  {
+    IdCoche = id_coche;
+    IdClienteCoch = id_cliente_coch;
+    Marca = marca;
+    Modelo = modelo;
+    FechMatric = fech_matric;
+    Bastidor = bastidor;
+    UserCreate = user_create;
+    AbpLocinstLastchangeTstmp = abp_locinst_lastchange_tstmp;
+    AbpLocinstLastchangeUtcl = abp_locinst_lastchange_utcl;
+    UserLastChange = user_last_change;
+    AbpLastchangeTstmpl = abp_lastchange_tstmpl;
+    AbpLastchangeUtcl = abp_lastchange_utcl;
+  }
+}

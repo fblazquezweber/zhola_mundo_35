@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DDLX" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DDLX>
+    <METADATA>
+     <NAME>ZME_CSD_DD_ZCONCE_35</NAME>
+     <DESCRIPTION>Metadata Extension ZCONCE_35</DESCRIPTION>
+     <MASTER_LANGUAGE>ES</MASTER_LANGUAGE>
+    </METADATA>
+   </DDLX>
+  </asx:values>
+ </asx:abap>
+</abapGit>
