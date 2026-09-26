@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de turnos</title>
+  <link rel="stylesheet" href="calendario_turnos.css">
+</head>
+<body>
+  <main class="app">
+    <section class="calendar-card" aria-labelledby="calendar-title">
+      <header class="toolbar">
+        <div>
+          <p class="eyebrow">Planificador mensual</p>
+          <h1 id="calendar-title">Calendario de turnos</h1>
+        </div>
+        <div class="month-controls" aria-label="Cambiar mes">
+          <button type="button" id="prev-month" class="nav-button" aria-label="Mes anterior">◀</button>
+          <div class="current-month" id="current-month" aria-live="polite"></div>
+          <button type="button" id="next-month" class="nav-button" aria-label="Mes siguiente">▶</button>
+        </div>
+      </header>
+
+      <section class="legend" aria-label="Leyenda de estados">
+        <span><i class="dot dot-work"></i>Trabajo</span>
+        <span><i class="dot dot-rest"></i>Libre</span>
+        <span><i class="dot dot-empty"></i>Sin marcar</span>
+      </section>
+
+      <div class="weekdays" id="weekdays" aria-hidden="true"></div>
+      <div class="calendar-grid" id="calendar-grid"></div>
+
+      <footer class="actions">
+        <button type="button" id="clear-month" class="secondary-button">Limpiar mes</button>
+        <button type="button" id="export-month" class="primary-button">Exportar mes</button>
+      </footer>
+
+      <section class="export-panel" aria-labelledby="export-title">
+        <div class="export-header">
+          <h2 id="export-title">Resumen exportado</h2>
+          <button type="button" id="copy-export" class="secondary-button">Copiar texto</button>
+        </div>
+        <textarea id="export-output" rows="10" readonly placeholder="Pulsa “Exportar mes” para generar el resumen del mes."></textarea>
+      </section>
+    </section>
+  </main>
+
+  <script src="calendario_turnos.js"></script>
+</body>
+</html>
